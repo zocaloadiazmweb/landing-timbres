@@ -1,0 +1,454 @@
+/* Aquí guardo los colores y tipografías principales para mantener todo ordenado */
+:root {
+  --zocalo-azul: #1a2456;
+  --zocalo-morado: #6c13d6;
+  --zocalo-morado-hover: #560eb0;
+  --zocalo-enlace: #2b59c3;
+  --zocalo-fondo-claro: #f7f8fa;
+  --zocalo-texto: #1a2456;
+  --zocalo-blanco: #ffffff;
+  --fuente-titulos: "Bebas Neue", sans-serif;
+  --fuente-textos: "Roboto", sans-serif;
+}
+
+body {
+  background-color: var(--zocalo-blanco);
+  color: var(--zocalo-texto);
+  font-family: var(--fuente-textos);
+  margin: 0;
+}
+
+/* Aplico la tipografía Bebas Neue a todos los títulos y botones de la landing */
+.zocalo-timbres h1,
+.zocalo-timbres h2,
+.zocalo-timbres h3,
+.zocalo-timbres button,
+.hero-timbres__boton {
+  font-family: var(--fuente-titulos);
+}
+
+/* Aquí conecto el fondo del slider exportado desde Figma */
+.hero-timbres {
+  background-color: #e9ebee;
+  background-image: url("img/slider-back.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-timbres__contenedor {
+  padding: 2.5rem 2.75rem 3.25rem;
+}
+
+.hero-timbres__info {
+  text-align: left;
+}
+
+.hero-timbres__marca {
+  color: var(--zocalo-azul);
+  display: inline-block;
+  font-family: var(--fuente-titulos);
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.2rem;
+}
+
+.hero-timbres__titulo {
+  color: var(--zocalo-azul);
+  font-size: 2.6rem;
+  line-height: 0.95;
+  margin-bottom: 0.75rem;
+}
+
+.hero-timbres__descripcion {
+  color: var(--zocalo-texto);
+  font-size: 0.95rem;
+  line-height: 1.45;
+  margin-bottom: 0.85rem;
+  max-width: 430px;
+}
+
+.hero-timbres__detalles {
+  color: var(--zocalo-azul);
+  font-family: var(--fuente-titulos);
+  font-size: 1.2rem;
+  letter-spacing: 0.03em;
+  margin-bottom: 1.25rem;
+}
+
+.hero-timbres__boton {
+  background-color: var(--zocalo-morado);
+  border-radius: 6px;
+  color: var(--zocalo-blanco);
+  display: inline-block;
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+  padding: 0.5rem 2.25rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.hero-timbres__boton:hover,
+.hero-timbres__boton:focus {
+  background-color: var(--zocalo-morado-hover);
+  color: var(--zocalo-blanco);
+}
+
+.hero-timbres__media {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.hero-timbres__imagen {
+  max-height: 290px;
+  object-fit: contain;
+}
+
+/* Oscurezco los íconos e indicadores de Bootstrap para que contrasten bien sobre el fondo claro */
+.hero-timbres__control {
+  opacity: 0.75;
+  width: 2.75rem;
+}
+
+.hero-timbres__control:hover {
+  opacity: 1;
+}
+
+.hero-timbres__icono {
+  filter: invert(1);
+}
+
+.hero-timbres__indicadores {
+  bottom: 0.75rem;
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.hero-timbres__indicadores li {
+  background-color: var(--zocalo-azul);
+  border-radius: 2px;
+  cursor: pointer;
+  height: 4px;
+  margin: 0 4px;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+  width: 30px;
+}
+
+.hero-timbres__indicadores li.active {
+  opacity: 1;
+}
+
+.hero-timbres .sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* Aquí armo la franja azul marino con el selector de tamaños y formas */
+.tamanos-timbres {
+  background-color: var(--zocalo-azul);
+  color: var(--zocalo-blanco);
+  padding: 3rem 0;
+}
+
+.tamanos-timbres__titulo {
+  color: var(--zocalo-blanco);
+  font-size: 2.3rem;
+  line-height: 0.98;
+  margin-bottom: 0.85rem;
+}
+
+.tamanos-timbres__texto {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  max-width: 340px;
+}
+
+.tamanos-timbres__filtros {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tamanos-timbres__filtro {
+  background-color: transparent;
+  border: none;
+  color: var(--zocalo-blanco);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--fuente-titulos);
+  font-size: 1.2rem;
+  letter-spacing: 0.04em;
+  padding: 0.15rem 0.25rem;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.tamanos-timbres__filtro:hover,
+.tamanos-timbres__filtro.is-activo {
+  color: var(--zocalo-blanco);
+  opacity: 0.8;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.tamanos-timbres__separador {
+  color: var(--zocalo-blanco);
+  font-family: var(--fuente-titulos);
+  font-size: 1.2rem;
+  opacity: 0.85;
+}
+
+.tamanos-timbres__respuesta {
+  color: #dbe2ff;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 0;
+  margin-top: 0.85rem;
+  min-height: 2.8rem;
+}
+
+/* Acomodo las tres tarjetas alineadas abajo para lograr el efecto de escalera */
+.tamanos-timbres__tarjetas {
+  align-items: flex-end;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.tamanos-timbres__tarjeta {
+  align-items: center;
+  background-color: var(--zocalo-blanco);
+  border: 2px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.65rem 0.45rem;
+  text-decoration: none;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.tamanos-timbres__tarjeta:hover,
+.tamanos-timbres__tarjeta.is-activo {
+  border-color: var(--zocalo-morado);
+  transform: translateY(-4px);
+}
+
+.tamanos-timbres__tarjeta--pequeno {
+  width: 92px;
+}
+
+.tamanos-timbres__tarjeta--mediano {
+  width: 112px;
+}
+
+.tamanos-timbres__tarjeta--grande {
+  width: 134px;
+}
+
+.tamanos-timbres__imagen {
+  height: auto;
+  margin-bottom: 0.4rem;
+  object-fit: contain;
+  width: 100%;
+}
+
+.tamanos-timbres__etiqueta {
+  color: var(--zocalo-texto);
+  font-family: var(--fuente-textos);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Diseño la caja limpia de marcas usando grilla adaptable según el ancho de pantalla */
+.marcas-timbres {
+  background-color: var(--zocalo-blanco);
+  padding: 3rem 0;
+}
+
+.marcas-timbres__caja {
+  background-color: var(--zocalo-fondo-claro);
+  border-radius: 12px;
+  padding: 2rem 1.25rem;
+}
+
+.marcas-timbres__lista {
+  align-items: center;
+  display: grid;
+  gap: 1.5rem 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.marcas-timbres__item {
+  display: flex;
+  justify-content: center;
+}
+
+/* Hago que todo el bloque de la marca funcione como un enlace completo y cómodo de tocar */
+.marcas-timbres__enlace {
+  align-items: center;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.5rem;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+  width: 100%;
+}
+
+.marcas-timbres__enlace:hover,
+.marcas-timbres__enlace:focus {
+  transform: translateY(-2px);
+}
+
+.marcas-timbres__logo {
+  height: auto;
+  max-width: 125px;
+  object-fit: contain;
+}
+
+.marcas-timbres__texto {
+  color: var(--zocalo-enlace);
+  font-family: var(--fuente-textos);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.marcas-timbres__enlace:hover .marcas-timbres__texto,
+.marcas-timbres__enlace:focus .marcas-timbres__texto {
+  text-decoration: underline;
+}
+
+/* Aquí estilizo la sección de contenidos manteniendo un diseño limpio y sin recargarlo */
+.contenidos-timbres {
+  background-color: var(--zocalo-blanco);
+  padding: 1rem 0 4rem;
+}
+
+.contenidos-timbres__titulo {
+  color: var(--zocalo-azul);
+  font-size: 1.9rem;
+  margin-bottom: 1.25rem;
+}
+
+.contenidos-timbres__tarjeta {
+  transition: transform 0.2s ease;
+}
+
+.contenidos-timbres__tarjeta:hover {
+  transform: translateY(-3px);
+}
+
+.contenidos-timbres__enlace {
+  color: inherit;
+  display: block;
+  text-decoration: none;
+}
+
+.contenidos-timbres__imagen {
+  border-radius: 10px;
+  height: auto;
+  margin-bottom: 0.75rem;
+  object-fit: cover;
+  width: 100%;
+}
+
+.contenidos-timbres__subtitulo {
+  color: var(--zocalo-texto);
+  font-size: 1.2rem;
+  line-height: 1.15;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .tamanos-timbres__tarjetas {
+    gap: 1.25rem;
+  }
+
+  .tamanos-timbres__tarjeta {
+    padding: 0.85rem 0.65rem;
+  }
+
+  .tamanos-timbres__tarjeta--pequeno {
+    width: 115px;
+  }
+
+  .tamanos-timbres__tarjeta--mediano {
+    width: 150px;
+  }
+
+  .tamanos-timbres__tarjeta--grande {
+    width: 195px;
+  }
+
+  .marcas-timbres__lista {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .hero-timbres__contenedor {
+    padding: 3rem 4rem 3.5rem;
+  }
+
+  .hero-timbres__titulo {
+    font-size: 4rem;
+    max-width: 460px;
+  }
+
+  .hero-timbres__detalles {
+    font-size: 1.3rem;
+  }
+
+  .hero-timbres__media {
+    margin-top: 0;
+  }
+
+  .hero-timbres__imagen {
+    max-height: 380px;
+  }
+
+  .hero-timbres__control {
+    width: 4.5rem;
+  }
+
+  .tamanos-timbres {
+    padding: 3.5rem 0;
+  }
+
+  .tamanos-timbres__titulo {
+    font-size: 3.2rem;
+  }
+
+  .tamanos-timbres__tarjetas {
+    gap: 1.5rem;
+    justify-content: flex-end;
+  }
+
+  .marcas-timbres__caja {
+    padding: 2.25rem 2.5rem;
+  }
+
+  .marcas-timbres__lista {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
